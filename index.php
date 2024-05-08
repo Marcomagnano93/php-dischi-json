@@ -22,8 +22,8 @@
                 v-for="disc in discs"
                 >
                     <img :src="disc.poster" class="card-img-top" alt="disc poster image">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ disc.title }}</h5>
+                    <div class="card-body text-center">
+                        <h3 class="card-title">{{ disc.title }}</h3>
                         <p class="card-text">Autore: {{ disc.author }}</p>
                         <p class="card-text">Anno di rilascio: {{ disc.year }}</p>
                         <p class="card-text">Genere: {{ disc.genre }}</p>
