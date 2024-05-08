@@ -3,7 +3,8 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      discs: []
+      discs: [],
+      modalOpen: false,
     }
   },
   methods: {
@@ -12,6 +13,14 @@ createApp({
         axios.get('./server.php').then((res) => {
             this.discs = res.data.results
         })
+    },
+    openModal(){
+        if(this.modalOpen === false){
+            this.modalOpen = true;
+        }
+        else {
+            this.modalOpen = false;
+        }
     }
   },
   created() {

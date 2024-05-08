@@ -18,7 +18,7 @@
     <main class="container-fluid py-5 bg-danger-subtle">
         <div class="container">
             <div class="row gap-3">
-                <div class="card p-3 bg-info-subtle" style="width: 300px;"
+                <div class="card p-3 bg-info-subtle" style="width: 300px;" @click="openModal"
                 v-for="disc in discs"
                 >
                     <img :src="disc.poster" class="card-img-top" alt="disc poster image">
@@ -30,6 +30,13 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div 
+        
+        class="container-fluid d-flex justify-content-center align-items-center"
+        v-if="modalOpen === true"
+        >
+       modal
         </div>
     </main>
   </div>
