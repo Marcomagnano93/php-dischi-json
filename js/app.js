@@ -3,7 +3,6 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      message: 'Hello Vue!',
       discs: []
     }
   },
@@ -13,7 +12,6 @@ createApp({
         axios.get('./server.php').then((res) => {
             this.discs = res.data.results
         })
-        console.log(this.discs)
     }
   },
   created() {
