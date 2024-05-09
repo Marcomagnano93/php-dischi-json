@@ -5,6 +5,7 @@ createApp({
     return {
       discs: [],
       modalOpen: false,
+      modalDisc: null
     }
   },
   methods: {
@@ -14,7 +15,9 @@ createApp({
             this.discs = res.data.results
         })
     },
-    openModal(){
+    openModal(disc){
+        this.modalDisc = disc;
+
         if(this.modalOpen === false){
             this.modalOpen = true;
         }
